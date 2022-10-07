@@ -1,0 +1,12 @@
+.review-item{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    display: flex;
+}
+.review-item img{
+    width: 91px;
+}
+.review-details-container{
+    display: flex;
+    align-items: center;
+}
