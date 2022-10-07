@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({ cart }) => {
+const  Cart = ({ cart }) => {
 //   console.log(cart);
   // way 1 calculate total
   // let total = 0;
