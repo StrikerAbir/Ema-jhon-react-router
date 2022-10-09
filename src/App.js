@@ -12,39 +12,42 @@ import { productsAndCartLoader } from './Loaders/productsAndCartLoader';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          element:<Shop></Shop>
-        },
-        {
-          path: '/shop',
+          path: "/",
           loader: () => {
-            return fetch('products.json')
+            return fetch("products.json");
           },
-          element:<Shop></Shop>
+          element: <Shop></Shop>,
         },
         {
-          path: '/orders',
+          path: "/shop",
+          loader: () => {
+            return fetch("products.json");
+          },
+          element: <Shop></Shop>,
+        },
+        {
+          path: "/orders",
           // loader: async () => {
           //   return fetch('products.json')
           // },
           loader: productsAndCartLoader,
-          element: <Orders></Orders>
+          element: <Orders></Orders>,
         },
         {
-          path: '/inventory',
-          element: <Inventory></Inventory>
+          path: "/inventory",
+          element: <Inventory></Inventory>,
         },
         {
-          path: 'about',
-          element:<About></About>
+          path: "about",
+          element: <About></About>,
         },
-      ]
+      ],
     },
-  ])
+  ]);
   return (
     <div>
       <RouterProvider router={router}></RouterProvider>

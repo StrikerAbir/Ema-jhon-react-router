@@ -11,6 +11,7 @@ import "./Shop.css";
 const Shop = () => {
   // const [products, setProducts] = useState([])
   const products = useLoaderData();
+  // console.log(products);
   const [cart, setCart] = useState([]);
 
   // useEffect(() => {
